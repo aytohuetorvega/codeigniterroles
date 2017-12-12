@@ -35,7 +35,7 @@ $dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 $db['default']['hostname'] = $server;
 $db['default']['username'] = $username;
 $db['default']['password'] = $password;
-$db['default']['database'] = 'iesferna_roles_codeigniter';
+$db['default']['database'] = $db;
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
