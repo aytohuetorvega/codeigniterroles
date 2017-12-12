@@ -19,6 +19,32 @@ $config = array(
     'db' => $db 
 );
 
+/*
+$connectstr_dbhost = 'db';
+$connectstr_dbname = 'iesferna_roles_codeigniter';
+$connectstr_dbusername = 'root';
+$connectstr_dbpassword = 'root';
+foreach ($_SERVER as $key => $value)
+{
+    if (strpos($key, "MYSQLCONNSTR_") !== 0)
+    {
+        continue;
+    }
+
+    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
+    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+
+    
+}
+
+define('DB_NAME', $connectstr_dbname);
+define('DB_USER', $connectstr_dbusername);
+define('DB_PASSWORD', $connectstr_dbpassword);
+define('DB_HOST', $connectstr_dbhost);
+*/
+
 define('DB_NAME', $db);
 define('DB_USER', $username);
 define('DB_PASSWORD', $password);
@@ -36,6 +62,7 @@ $db['default']['hostname'] = $server;
 $db['default']['username'] = $username;
 $db['default']['password'] = $password;
 $db['default']['database'] = $db;
+/*$db['default']['database'] = 'iesferna_roles_codeigniter';*/
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
