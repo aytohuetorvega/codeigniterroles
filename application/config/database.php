@@ -6,30 +6,23 @@ $active_record = TRUE;
 
 
 // From the blog-post
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-$connectstr_dbhost = 'db';
-$connectstr_dbname = 'iesferna_roles_codeigniter';
-$connectstr_dbusername = 'root';
-$connectstr_dbpassword = 'root';
-foreach ($_SERVER as $key => $value)
-{
-    if (strpos($key, "MYSQLCONNSTR_") !== 0)
-    {
-        continue;
-    }
+$config = array(
+    'host' => $server ,
+    'user' => $username ,
+    'pw' => $password,
+    'db' => $db 
+);
 
-    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-
-    
-}
-
-define('DB_NAME', $connectstr_dbname);
-define('DB_USER', $connectstr_dbusername);
-define('DB_PASSWORD', $connectstr_dbpassword);
-define('DB_HOST', $connectstr_dbhost);
+define('DB_NAME', $db);
+define('DB_USER', $username);
+define('DB_PASSWORD', $password);
+define('DB_HOST', $server);
 
 
 
@@ -39,9 +32,9 @@ $dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 
 
 
-$db['default']['hostname'] = $connectstr_dbhost;
-$db['default']['username'] = $connectstr_dbusername;
-$db['default']['password'] = $connectstr_dbpassword;
+$db['default']['hostname'] = $server;
+$db['default']['username'] = $username;
+$db['default']['password'] = $password;
 $db['default']['database'] = 'iesferna_roles_codeigniter';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
