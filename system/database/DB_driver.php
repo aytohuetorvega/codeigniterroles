@@ -31,10 +31,10 @@
 class CI_DB_driver {
 
 
-	var $username;
-	var $password;
-	var $hostname;
-	var $database ='db';
+	var $username='b7d728f7f5a274';
+	var $password='eb97439a';
+	var $hostname='us-cdbr-iron-east-05.cleardb.net';
+	var $database ='heroku_f740d26f594cb22';
 	var $dbdriver= 'mysqli';
 	
 	
