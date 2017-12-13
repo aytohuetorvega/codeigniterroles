@@ -58,10 +58,7 @@ $conn = new mysqli($server, $username, $password, $db);
 $dbConnection=$conn;
 
 
-$db['default']['hostname'] = $server;
-$db['default']['username'] = $username;
-$db['default']['password'] = $password;
-$db['default']['database'] = $db;
+
 /*$db['default']['database'] = 'iesferna_roles_codeigniter';*/
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
