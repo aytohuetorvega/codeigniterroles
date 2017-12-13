@@ -53,7 +53,8 @@ define('DB_HOST', $server);
 
 
 $dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
+$conn = new mysqli($server, $username, $password, $db);
+$dbConnection=$conn;
 
 $db['default']['hostname'] = $server;
 $db['default']['username'] = $username;
