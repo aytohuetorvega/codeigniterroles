@@ -31,12 +31,11 @@
 class CI_DB_driver {
 
 
-
-	var $username='';
-	var $password='';
-	var $hostname=$server;
-	var $database=$dbname;
-	var $dbdriver='mysqli';
+	var $username ='azure';
+	var $password ='6#vWHD_$';
+	var $hostname ='127.0.0.1:56147';
+	var $database ='localdb';
+	var $dbdriver		= 'mysql';
 	
 	
 	
