@@ -36,7 +36,7 @@ class CI_DB_driver {
 	var $password=$password;
 	var $hostname=$server;
 	var $database=$dbname;
-	var $dbdriver='mysqli';
+	var $dbdriver='mysql';
 	
 	
 	
