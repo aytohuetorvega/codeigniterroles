@@ -8,7 +8,7 @@ class Login extends CI_Controller
 		$this->load->model('login_model');
 		$this->load->library(array('session','form_validation'));
 		$this->load->helper(array('url','form'));
-		$this->load->database('default');
+		$this->load->database('');
 		$this->load->library("security");
 		$this->load->library("bcrypt");
     }
