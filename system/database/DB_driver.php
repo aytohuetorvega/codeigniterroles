@@ -30,10 +30,21 @@
  */
 class CI_DB_driver {
 
-	var $username		='iesferna_master';
-	var $password		= 'acfm2017';
-	var $hostname		='db';
-	var $database		= 'iesferna_roles_codeigniter';
+	
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+	
+	
+	
+	
+	var $username		=$username;
+	var $password		=$password;
+	var $hostname		=$server;
+	var $database		= $db;
 	var $dbdriver		= 'mysqli';
 	var $dbprefix		= '';
 	var $char_set		= 'utf8';
