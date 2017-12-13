@@ -36,11 +36,6 @@ class CI_DB_driver {
 	
 	
 	
-	var $username		=$username;
-	var $password		=$password;
-	var $hostname		=$server;
-	var $database		= $dbname;
-	var $dbdriver		= 'mysqli';
 	var $dbprefix		= '';
 	var $char_set		= 'utf8';
 	var $dbcollat		= 'utf8_general_ci';
