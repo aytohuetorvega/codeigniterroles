@@ -32,7 +32,11 @@ class CI_DB_driver {
 
 	
 
-	
+	var $username;
+	var $password;
+	var $hostname;
+	var $database;
+	var $dbdriver='mysqli';
 	
 	
 	
