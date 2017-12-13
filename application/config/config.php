@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-/*$config['base_url']	= 'https://codeigniterroles.herokuapp.com/';*/
-$config['base_url']	= 'http://localhost:8080/';
+$config['base_url']	= 'https://codeigniterroles.herokuapp.com';
+
 
 /*
 |--------------------------------------------------------------------------
