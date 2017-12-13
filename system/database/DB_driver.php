@@ -37,7 +37,7 @@ class CI_DB_driver {
 	var $database ='heroku_f740d26f594cb22';
 	var $dbdriver= 'mysqli';
 	
-	
+
 	
 	var $dbprefix		= '';
 	var $char_set		= 'utf8';
