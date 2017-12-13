@@ -58,7 +58,7 @@ $dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 
 
 
-$db['default']['hostname'] = $server;
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = $username;
 $db['default']['password'] = $password;
 $db['default']['database'] = $db;
