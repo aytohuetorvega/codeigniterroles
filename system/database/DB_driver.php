@@ -30,12 +30,12 @@
  */
 class CI_DB_driver {
 
-	
 
-	var $username;
-	var $password;
-	var $hostname;
-	var $database;
+
+	var $username=$username;
+	var $password=$password;
+	var $hostname=$server;
+	var $database=$dbname;
 	var $dbdriver='mysqli';
 	
 	
