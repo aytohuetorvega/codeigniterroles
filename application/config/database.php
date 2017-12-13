@@ -59,8 +59,6 @@ $dbConnection=$conn;
 
 
 
-/*$db['default']['database'] = 'iesferna_roles_codeigniter';*/
-$db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
