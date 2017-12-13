@@ -10,13 +10,13 @@ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
-$db = substr($url["path"], 1);
+$dbname = substr($url["path"], 1);
 
 $config = array(
     'host' => $server ,
     'user' => $username ,
     'pw' => $password,
-    'db' => $db 
+    'db' => $dbname
 );
 
 /*
@@ -45,21 +45,20 @@ define('DB_PASSWORD', $connectstr_dbpassword);
 define('DB_HOST', $connectstr_dbhost);
 */
 
-define('DB_NAME', $db);
+define('DB_NAME', $dbname);
 define('DB_USER', $username);
 define('DB_PASSWORD', $password);
 define('DB_HOST', $server);
 
 
 
-//$dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-$conn = new mysqli($server, $username, $password, $db);
-$dbConnection=$conn;
+
 $db['default']['hostname'] = $server;
 $db['default']['username'] = $username;
 $db['default']['password'] = $password;
-$db['default']['database'] = $db;
+$db['default']['database'] = $dbname;
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
